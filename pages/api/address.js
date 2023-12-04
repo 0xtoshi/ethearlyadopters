@@ -1,5 +1,6 @@
 import sqlite3 from "sqlite3";
 import { open, Database } from "sqlite";
+import path from "path";
 
 // Let's initialize it as null initially, and we will assign the actual database instance later.
 let db = null;
@@ -11,7 +12,7 @@ export default async function handler(req, res) {
       if (!db) {
         // If the database instance is not initialized, open the database connection
         db = await open({
-          filename: "./eth.db", // Specify the database file path
+          filename: path.resolve("eth.db"), // Specify the database file path
           driver: sqlite3.Database, // Specify the database driver (sqlite3 in this case)
         });
       }
@@ -30,6 +31,7 @@ export default async function handler(req, res) {
       // => {name: "Albania", code: "AL"}
     } catch (err) {
       res.status(404).json({ status: 404, data: err });
+      console.log(err);
       //throw { status: "error", message: "Error Fetching RPC" };
     }
   } else {
