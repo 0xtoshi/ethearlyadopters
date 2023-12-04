@@ -29,7 +29,7 @@ export default async function handler(req, res) {
 
       // => {name: "Albania", code: "AL"}
     } catch (err) {
-      res.status(404).json({ status: 404, data: "Not Found" });
+      res.status(404).json({ status: 404, data: err });
       //throw { status: "error", message: "Error Fetching RPC" };
     }
   } else {
