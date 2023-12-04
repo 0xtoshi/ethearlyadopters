@@ -1,6 +1,7 @@
 import sqlite3 from "sqlite3";
 import { open, Database } from "sqlite";
 import path from "path";
+export const runtime = "edge";
 
 // Let's initialize it as null initially, and we will assign the actual database instance later.
 let db = null;
