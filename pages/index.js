@@ -106,7 +106,7 @@ export default () => {
                 <textarea
                   id="comment"
                   rows={6}
-                  className="w-full px-0 text-sm text-gray-900  border-0 bg-gray-800 focus:ring-0text-white placeholder-gray-400"
+                  className="w-full px-0 text-sm  border-0 bg-gray-800 focus:ring-0 text-white placeholder-gray-400"
                   placeholder="EoA Address separated by new line"
                   required=""
                   defaultValue={addressList}
@@ -133,7 +133,7 @@ export default () => {
               <tr>
                 <th className="py-3 pr-6">Address</th>
                 <th className="py-3 pr-6">Status</th>
-                <th className="py-3 pr-6">Contract Interaction Count</th>
+                <th className="py-3 pr-6">Contract Count</th>
               </tr>
             </thead>
             <tbody className="text-white divide-y bg-black">
