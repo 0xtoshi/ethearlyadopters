@@ -73,7 +73,7 @@ export default () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
       </Head>
-      <section>
+      <section className="bg-black">
         <div className="max-w-screen-xl mx-auto px-4 py-20 gap-12 text-gray-600 md:px-8">
           <div className="space-y-5 max-w-4xl mx-auto text-center">
             <h2 className="text-4xl text-gray-800 font-extrabold mx-auto md:text-5xl">
@@ -100,20 +100,20 @@ export default () => {
             </div>
           </div>
           <div className="mt-14">
-            <div className="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-              <div className="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
+            <div className="w-full mb-4 border rounded-lg  bg-gray-700 border-gray-600">
+              <div className="px-4 py-2  rounded-t-lg bg-gray-800">
                 <label htmlFor="comment" className="sr-only"></label>
                 <textarea
                   id="comment"
                   rows={6}
-                  className="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
+                  className="w-full px-0 text-sm text-gray-900  border-0 bg-gray-800 focus:ring-0text-white placeholder-gray-400"
                   placeholder="EoA Address separated by new line"
                   required=""
                   defaultValue={addressList}
                   onChange={ChangeAddressList}
                 />
               </div>
-              <div className="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600">
+              <div className="flex items-center justify-between px-3 py-2 border-t border-gray-600">
                 <button
                   onClick={doCheck}
                   type="submit"
@@ -126,7 +126,7 @@ export default () => {
           </div>
         </div>
       </section>
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+      <div className="max-w-screen-xl mx-auto px-4 md:px-8 bg-black">
         <div className="mt-12 relative h-max overflow-auto">
           <table className="w-full table-auto text-sm text-left">
             <thead className="text-white font-medium border-b">
@@ -136,7 +136,7 @@ export default () => {
                 <th className="py-3 pr-6">Contract Interaction Count</th>
               </tr>
             </thead>
-            <tbody className="text-white divide-y">
+            <tbody className="text-white divide-y bg-black">
               {tableItems.map((item, idx) => (
                 <tr key={idx}>
                   <td className="pr-6 py-4 whitespace-nowrap">
