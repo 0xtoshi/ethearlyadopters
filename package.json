@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@eisberg-labs/next-google-analytics": "^5.0.1",
     "@vercel/analytics": "^1.1.1",
     "axios": "^1.6.2",
     "next": "14.0.3",
     "next-themes": "^0.2.1",
+    "nextjs-google-analytics": "^2.3.3",
     "react": "^18",
     "react-dom": "^18",
     "sqlite": "^5.1.1",
