@@ -1,5 +1,6 @@
 import axios from "axios";
 import Head from "next/head";
+import Script from "next/script";
 
 import { useState } from "react";
 
@@ -72,6 +73,16 @@ export default () => {
         <meta property="og:image" content="/checker.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-8YRY1JPB19" />
+        <Script id="google-analytics">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-8YRY1JPB19');
+        `}
+        </Script>
       </Head>
       <section className="bg-black">
         <div className="max-w-screen-xl mx-auto px-4 py-20 gap-12 text-gray-600 md:px-8">
